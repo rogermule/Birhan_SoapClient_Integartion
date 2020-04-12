@@ -40,7 +40,7 @@ class TransactionsController extends DefaultController
 
         $response =  $this->soapWrapper->call('Birhan.GetDataByAccountNumber',
             [
-                new GetDataByAccountNumber('1000062386638', '2020-01-30T09:00:00', '2020-10-30T09:00:00')
+                new GetDataByAccountNumber(env('BIRHAN_SERVER_ACCOUNT', ''), '2020-01-30T09:00:00', '2020-10-30T09:00:00')
             ]
         );
 
